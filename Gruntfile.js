@@ -3,6 +3,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
+      dist: {
+        src: ['public/client/*.js'],
+        dest: 'public/dist/shortly.js'
+      }
     },
 
     mochaTest: {
@@ -21,6 +25,22 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+        files : [
+          { src: 'public/dist/shortly.js', dest: 'public/dist/shortly.min.js' },
+          {
+            expand: true,
+            cwd: 'public/lib/',
+            src: ['*.js'],
+            dest: 'public/dist/lib',
+            ext: '.min.js',
+            extDot: 'first'
+          }
+        ]
+      },
     },
 
     jshint: {
