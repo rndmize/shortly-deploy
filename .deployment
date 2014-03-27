@@ -1,4 +1,2 @@
 [config]
-command = npm install -g grunt
-command = grunt concat
-command = grunt uglify
+command = bash deploy.sh
