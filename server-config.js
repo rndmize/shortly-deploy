@@ -1,3 +1,5 @@
+/* global require, module, __dirname */
+
 var express = require('express');
 var partials = require('express-partials');
 var util = require('./lib/utility');
