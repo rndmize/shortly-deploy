@@ -7,6 +7,8 @@ var crypto = require('crypto');
 
 
 
+console.log(process.env.MONGO_URL);
+
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/test');
 
 var db = mongoose.connection;
@@ -14,6 +16,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function () {
+  console.log('successfully connect to mongo');
   var userSchema = new mongoose.Schema({
     username: {
       type: String,

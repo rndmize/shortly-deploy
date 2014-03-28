@@ -1,0 +1,12 @@
+Thu Mar 27 2014 16:17:39 GMT-0700 (PDT):
+{ [Error: No account information found. Please import credentials using "azure account import <file>".]
+  stack: [Getter/Setter],
+  __frame: undefined,
+  rawStack: [Getter] }
+Error: No account information found. Please import credentials using "azure account import <file>".
+    at Object.readFromFile (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/util/keyFiles.js:33:11)
+    at AccountClient.__.extend.managementCertificate (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/core/subscriptionclient.js:357:21)
+    at AccountClient.__.extend.getCurrentSubscription (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/core/subscriptionclient.js:49:35)
+    at AzureCli.account.getCurrentSubscription (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/account._js:100:26)
+    at __1 (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/site._js:67:47)
+
